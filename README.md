@@ -13,7 +13,7 @@ In terraform, we typically use these 4 commands:
 4) terraform destroy
 How to install terraform ? https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli#install-terraform
 
-Unline ansible/yaml, HCL Terraform is not indendation specific. But for look and feel, we make sure to follow the standard spacing
+Unlike ansible/yaml, HCL Terraform is not indendation specific. But for look and feel, we make sure to follow the standard spacing
 
 How EC2 instance can authorize to AWS Cloud and provision resources ? 1) We will provision an IAM Role for EC2 service 2) Then assign the needed roles to the provisioned IAM Roles ( Full Access ) 3) We are going to attach this to WS / Jenkins
 
@@ -45,8 +45,8 @@ Naming Standards: 1) Either use lowerCase letters with _ or - only 2) follow cam
 
 What is terraform.tfvars ? > This is a file that holds all the default values that needs to be used irrespective of the environment. > When you delcare the variable values in this file, you don't have to explicitly mention this file as terraform picks "terraform.tfvars" by default > When you declare some value in dev.tfvars, qa.tfvars, prod.tfvars, then while running terraform commands, we need to mention that file
 
-How to run a tf command that has xyz.tfvas, $ terraform init ; terraform plan --var-file=dev.tfvars
+How to run a tf command that has xyz.tfvar, $ terraform init ; terraform plan --var-file=dev.tfvars
 
-How to run a tf command that has xyz.tfvas & cli varaibles, $ terraform init ; terraform plan --var-file=dev.tfvars -var environment=cli
+How to run a tf command that has xyz.tfvar & cli varaibles, $ terraform init ; terraform plan --var-file=dev.tfvars -var environment=cli
 
 Variable Priority ? cliVariables > ***.tfvars > terraform.tfvars > terraform.auto.tfvars
